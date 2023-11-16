@@ -1,7 +1,7 @@
 from collections import Counter
 import numpy as np
 
-def calculate_hmm_parameters_extended(alignments):
+def calculate_hmm_parameters(alignments):
     num_sequences = len(alignments)
     sequence_length = len(alignments[0])
     match_threshold = num_sequences / 2
@@ -48,7 +48,7 @@ alignments = [
     "FNA--NIPKH",
     "IAGADNGAGY"
 ]
-states, transitions, emission_probabilities, background_probabilities = calculate_hmm_parameters_extended(alignments)
+states, transitions, emission_probabilities, background_probabilities = calculate_hmm_parameters(alignments)
 print("States:",states)
 print("Transitions",transitions)
 print("Emmission Probabilities:",emission_probabilities)
